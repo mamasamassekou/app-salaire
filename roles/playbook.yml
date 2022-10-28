@@ -1,6 +1,6 @@
 ---
 
-- hosts: 10.0.0.59
+- hosts: web
 
   roles:
    - roles/apache

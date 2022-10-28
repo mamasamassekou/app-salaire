@@ -1,2 +1,24 @@
 ---
 # tasks file for php
+ - name: installer php
+  yum:
+   name: "{{ php_packets }}"
+   state: present
+
+- name: modification des valeurs user de fpm
+  lineinfile:
+   path: /etc/php-fpm.d/www.conf
+   regexp: '^user = apache'
+   line: ' user = nginx '
+
+- name: changement du group
+  lineinfile:
+   path: /etc/php-fpm.d/www.conf
+   regexp: '^group = apache'
+   line: ' group = nginx '
+
+- name: demarrer php-fpm
+  systemd:
+   name: php-fpm
+   state: started
+   enabled: yes

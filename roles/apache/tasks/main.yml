@@ -1,4 +1,7 @@
-- name: mise en service  apache
+
+# tasks file for apache
+#
+  name: mise en service  apache
   yum:
    name: httpd
    state: present
@@ -13,5 +16,5 @@
   systemd:
    name: httpd
    state: started
-   enabled: yes---
-# tasks file for apache
+   enabled: yes
+  
