@@ -1,2 +1,4 @@
 ---
 # vars file for apache
+sites:
+ - app-salaire.jeanmarie.form
