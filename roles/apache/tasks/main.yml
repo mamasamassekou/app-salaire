@@ -12,7 +12,7 @@
   loop:
     "{{ sites }}"
 
-- name: Création  du template de fichier de configuration
+- name: Création du template de fichier de conf
   template:
    src: conf.j2
    dest: /etc/httpd/conf.d/{{ item }}.conf
@@ -22,6 +22,6 @@
 - name: Copier les fichiers php
   copy:
    src: app-php/
-      dest: /var/www/{{ item }}/html/
+   dest: /var/www/{{ item }}/html/
   loop:
     "{{ sites }}"
