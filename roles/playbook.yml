@@ -1,7 +1,0 @@
----
-
-- hosts: web
-
-  roles:
-   - roles/apache
-   - roles/mariadb

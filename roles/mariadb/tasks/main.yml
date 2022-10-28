@@ -1,6 +1,6 @@
 ---
 # tasks file for mariadb
-- name: mise en service  Mariadb
+- name: installation Mariadb
   yum:
    name: "{{ item }}"
    state: present
